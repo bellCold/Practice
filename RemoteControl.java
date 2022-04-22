@@ -1,4 +1,4 @@
-package hi;
+package hi.control;
 
 public interface RemoteControl {
     int MAX_VOLUME = 10;
@@ -10,15 +10,16 @@ public interface RemoteControl {
 
     void setVolume(int volume);
 
-    default void setMute(boolean mute) {
-        if (mute) {
-            System.out.println("무음 처리");
+    default void setMute(boolean ture) {
+        if (ture) {
+            System.out.println("무음 설정");
         } else {
             System.out.println("무음 해제");
         }
+
     }
 
     static void changeBattery() {
-        System.out.println("건전지 교환");
+        System.out.println("배터리 교환");
     }
 }
